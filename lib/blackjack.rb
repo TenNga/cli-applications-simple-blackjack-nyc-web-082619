@@ -64,14 +64,6 @@ def runner
       display_card_total(cardTotal)
     end
   end
-  prompt_user()
-  input = get_user_input()
-  while(input == "s")
-    prompt_user()
-    input = get_user_input()
-  end
-  cardTotal += deal_card()
-  if cardTotal
-end
+  end_game(cardTotal)
 end
     
