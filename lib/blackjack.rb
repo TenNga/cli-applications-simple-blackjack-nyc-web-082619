@@ -55,6 +55,23 @@ end
 
 def runner
   welcome()
-  initial_round()
+  cardTotal = initial_round()
+  while cardTotal < 21
+    prompt_user()
+    input = get_user_input()
+    if input == "h"
+      cardTotal += deal_card()
+      display_card_total(cardTotal)
+    end
+  end
+  prompt_user()
+  input = get_user_input()
+  while(input == "s")
+    prompt_user()
+    input = get_user_input()
+  end
+  cardTotal += deal_card()
+  if cardTotal
+end
 end
     
